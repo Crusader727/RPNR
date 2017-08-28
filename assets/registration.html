@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/icon.jpg">
+    <title>ANPR</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap_min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/cover.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">ANPR in Golang</h3>
+                        <a href="/login" class="myregistration">Already have an account?</a>
+                    </div>
+                </div>
+                <form class="form-signin" action="http://127.0.0.1:8000/register" method="post">
+                    <h1 class="cover-heading">Sign up</h1>
+                    <br>
+                    <input type="text" name="username" class="form-control" placeholder="User name" required autofocus>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                    <input type="password" name="confirm" class="form-control" placeholder="Confirm password" required>
+                    <br>
+                    <br>
+                    <div class="inner cover">
+                        <input class="btn btn-lg btn-secondary" type="submit" value="Register" />
+                    </div>
+                    <br>
+                </form>
+                <b style="color: #FFD700">{{.Res}}</b>
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>ANPR in Golang for @mail.ru group by <a href="https://vk.com/ruben97">Oganesyan.R</a>, <a href="https://vk.com/icanwalkinyourmind">Medvedev.V</a>, <a href="https://vk.com/ivan_off_ivan">Kurkin.N</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

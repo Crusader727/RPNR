@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/icon.jpg">
+
+    <title>ANPR</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap_min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/cover.css" rel="stylesheet">
+</head>
+
+<script>
+    function mults(str) {
+    if(str.search(/^([\d\s]+)\*([\d\s]+)$/) != -1) {
+                   var arr = str.match(/^([\d\s]+)\*([\d\s]+)$/);
+                   return parseInt(arr[0]) * parseInt(arr[2]);
+    }
+    return "NaN";
+}
+</script>
+
+<body>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h1 class="masthead-brand">ANPR in Golang</h1>
+                        <nav class="nav nav-masthead">
+                            <a class="nav-link" href="/">Home</a>
+                            <a class="nav-link active" href="/hist">History</a>
+                            <a class="nav-link" href="/logout">Log out</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h2 class="cover-heading">History of {{.Username}}</h2>
+                    <br>
+                    <br>
+                    <b style="color: #FFD700">{{.Res}} </b>
+                    <br>
+                    {{range .Srcs}}<li><b>{{.ImgRes}}<img id="resultElem" src="{{.Img}}" height="200"/></script><b></li>
+                    <script>
+                        const resultMulty=mults("200*{{.ImgRes}}");
+                        const resultElem = document.getElementById('resultElem');
+                        resultElem.width=resultMulty;
+                    </script>{{end}}
+                </div>
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>ANPR in Golang for @mail.ru group by <a href="https://vk.com/ruben97">Oganesyan.R</a>, <a href="https://vk.com/icanwalkinyourmind">Medvedev.V</a>, <a href="https://vk.com/ivan_off_ivan">Kurkin.N</a>.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
